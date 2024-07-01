@@ -15,13 +15,17 @@ This project involves setting up and configuring an Oracle database from scratch
 - Network configuration
 - User creation and privilege management
 
-## Contents
+## Project Structure
 
-- `install_oracle.sh`: Shell script for installing Oracle Database.
-- `init_parameters.sql`: SQL script to set initialization parameters.
-- `network_config.sql`: SQL script for network configuration.
-- `create_users.sql`: SQL script to create users and manage privileges.
-- `README.md`: This file, providing detailed instructions for each step of the setup process.
+```
+oracle-database-setup/
+├── install_oracle.sh
+├── init_parameters.sql
+├── network_config.sql
+├── create_users.sql
+├── README.md
+└── LICENSE
+```
 
 ## Instructions
 
@@ -67,11 +71,11 @@ Create database users and manage their privileges using the provided script. Thi
 sqlplus / as sysdba @create_users.sql
 ```
 
-### Detailed Steps and Explanations
+## Detailed Steps and Explanations
 
 Refer to the sections below for detailed steps and explanations for each part of the setup process.
 
-## Installation Script (`install_oracle.sh`)
+### Installation Script (`install_oracle.sh`)
 
 This script automates the installation of Oracle Database. Ensure you have downloaded the necessary Oracle installation files and placed them in the appropriate directory. The script performs the following tasks:
 - Sets up environment variables
@@ -79,7 +83,7 @@ This script automates the installation of Oracle Database. Ensure you have downl
 - Creates a listener
 - Configures database parameters
 
-## Initialization Parameters (`init_parameters.sql`)
+### Initialization Parameters (`init_parameters.sql`)
 
 This SQL script sets essential initialization parameters to optimize the performance and behavior of your Oracle database. Key parameters include:
 - `db_cache_size`
@@ -89,7 +93,7 @@ This SQL script sets essential initialization parameters to optimize the perform
 
 Customize these parameters based on your specific requirements and available system resources.
 
-## Network Configuration (`network_config.sql`)
+### Network Configuration (`network_config.sql`)
 
 This SQL script configures the network settings for your Oracle database, including:
 - Listener configuration
@@ -97,7 +101,7 @@ This SQL script configures the network settings for your Oracle database, includ
 
 These settings ensure that your database can communicate with other systems and applications over the network.
 
-## User Creation and Privilege Management (`create_users.sql`)
+### User Creation and Privilege Management (`create_users.sql`)
 
 This SQL script creates database users and assigns appropriate privileges. Key steps include:
 - Creating user accounts
